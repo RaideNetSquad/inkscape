@@ -1,0 +1,21 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Raport_new</_name>
+    <id>org.ekips.filter.Raport_new</id>
+    <dependency type="executable" location="extensions">raport.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="count"    type="int"   min="1"    max="10000"     _gui-text="Len rapport">24</param>
+    <param name="height"    type="float" min="0.0"  max="1000.0"    _gui-text="height rapport">20.0</param>
+    <param name="width"    type="float" min="10.0" max="30.0"      _gui-text="width rapport">20.0</param>
+
+    <effect>
+	<object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Render"/>
+        </effects-menu>						    		
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">raport.py</command>
+    </script>
+</inkscape-extension>
